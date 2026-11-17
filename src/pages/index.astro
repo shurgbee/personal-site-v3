@@ -1,4 +1,5 @@
 ---
+import { Font } from "astro:assets";
 ---
 
 <html lang="en">
@@ -9,22 +10,29 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
+		<Font cssVariable="--font-lora" preload />
   </head>
+  <body>
   <style>
   .container {
     display: flex;
     justify-content: center; /* Horizontal */
     align-items: center;     /* Vertical */
     height: 100vh;
+  }
+  p{
     color: white;
+    font-family: var(--font-lora);
+    font-weight: 500;
+    font-size: 24px;
+    padding: 0 10vw 0 10vw;
   }
   body {
-    background-color: black;
+    background-color: #191919;
   }
   </style>
-  <body>
     <div class="container">
-      <p>This site is currently being worked on. Rather than having outdated info, I decided to just put up this temp html page</p>
+      <p>This site is currently being worked on. Rather than having outdated info, I decided to just put up this small HTML page instead</p>
     </div>
 	</body>
 </html>
